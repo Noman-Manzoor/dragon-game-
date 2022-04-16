@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600&family=Fira+Code:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.game_contaier {
+    /* border: 2px solid red; */
+    background-image: url('bg4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    /* margin: 20px auto; */
+    color: white;
+    position: relative;
+    /* visibility: hidden; */
+    overflow: hidden;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+#dino {
+    width: 300px;
+    height: 180px;
+    /* border: 3px solid red; */
+    position: absolute;
+    left: 140px;
+    bottom: 21px;
+}
+
+#obstacle {
+    width: 300px;
+    height: 150px;
+    /* border: 3px solid red; */
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    /* z-index: -; */
+}
+
+#p_heading {
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 3PX;
+    color: white;
+    background-color: #2874f0;
+}
+
+.animation_p_heading {
+    animation: p_heading_bg_change 20s infinite;
+}
+
+@keyframes p_heading_bg_change {
+    0% {
+        background-color: rgb(91, 231, 189);
+    }
+    10% {
+        background-color: rgb(199, 224, 106);
+    }
+    20% {
+        background-color: rgb(240, 116, 122);
+    }
+    30% {
+        background-color: rgb(188, 108, 202);
+    }
+    40% {
+        background-color: rgb(71, 105, 199);
+    }
+    50% {
+        background-color: rgb(122, 182, 164);
+    }
+    70% {
+        background-color: rgb(79, 161, 137);
+    }
+    90% {
+        background-color: rgb(32, 119, 93);
+    }
+    100% {
+        background-color: rgb(233, 207, 123);
+    }
+}
+
+#score {
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    float: right;
+    /* border: 2px solid red; */
+    margin: 20px;
+    font-weight: 900;
+    font-size: x-large;
+    visibility: hidden;
+}
+
+#message {
+    float: left;
+    /* border: 2px solid red; */
+    margin: 20px;
+    font-size: xx-large;
+}
+
+.animateDino {
+    animation: dino_jump 1s linear;
+}
+
+@keyframes dino_jump {
+    0% {
+        bottom: 19px;
+    }
+    25% {
+        bottom: 250px;
+    }
+    50% {
+        bottom: 400px;
+    }
+    75% {
+        bottom: 120px;
+    }
+    100% {
+        bottom: 19px;
+    }
+}
+
+.animateObstacle {
+    animation: obstacle_movement 3s ease infinite;
+}
+
+@keyframes obstacle_movement {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -30vw;
+    }
+}
+
+#gameover img {
+    width: 300px;
+    position: absolute;
+    bottom: 220px;
+    left: 530px;
+}
+
+.final_score {
+    margin-right: 150px !important;
+    margin-top: 150px !important;
+    font-size: xx-large !important;
+}
+
+#gameover {
+    visibility: hidden;
+}
+
+#play_button {
+    position: absolute;
+    bottom: 45px;
+    left: 570px;
+    visibility: hidden;
+}
+
+.btn {
+    width: 16vw;
+    height: 5vw;
+    font-size: x-large;
+    border-radius: 24px;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    padding: 10px;
+    font-weight: 900;
+    color: rgb(41, 111, 241);
+}

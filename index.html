@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Chrome Dino Game</title>
+    <script>
+        // here is javscript only  for buttons
+        function start_game() {
+            document.getElementById('obstacle').classList.add('animateObstacle');
+            document.getElementById('p_heading').classList.add('animation_p_heading');
+            document.getElementById('message').style.visibility = 'hidden';
+            document.getElementById('score').style.visibility = 'visible';
+        }
+
+        function playAgain() {
+            location.reload();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="game_contaier">
+        <h1 id="p_heading">WELCOME TO IDRAGON CREATED BY NOUMAN</h1>
+        <div id="message">
+            <button id="play" class="btn" onclick="start_game()">START GAME</button>
+        </div>
+        <div id="score">Your Score : 0</div>
+        <div id="gameover">
+            <img src="gameover1.png" alt="">
+        </div>
+        <img id="dino" src="dino.png" alt="">
+        <img id="obstacle" src="obstacle.png" alt="">
+        <button id="play_button" class="btn" onclick="playAgain()">PLAY AGAIN!</button>
+    </div>
+</body>
+
+</html>
